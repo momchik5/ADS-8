@@ -20,20 +20,20 @@ void Train::addCage(bool light) {
 
 int Train::getLength() {
     if (first == nullptr) return 0;
-    int long = 0;
+    int dlina = 0;
     first->light = true;
     Cage* CageNow = first;
     while (first->light) {
-        long = 1;
+        dlina = 1;
         CageNow = first->next;
         while (!CageNow->light) {
             CageNow = CageNow->next;
-            long = long + 1;
+            dlina = dlina + 1;
         }
         CageNow->light = false;
         countOp = countOp + long * 2;
     }
-    return long;
+    return dlina;
 }
 
 int Train::getOpCount() {

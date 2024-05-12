@@ -31,7 +31,7 @@ int Train::getLength() {
             dlina = dlina + 1;
         }
         CageNow->light = false;
-        countOp = countOp + long * 2;
+        countOp = countOp + dlina * 2;
     }
     return dlina;
 }
